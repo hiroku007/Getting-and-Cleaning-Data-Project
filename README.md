@@ -8,11 +8,17 @@ Instructions for how script runs
 1) Download file if the .zip file found at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip does not exist in working directory
 
 2) Reads all files into R's environment, and stores them with some appropriate titles. There should now be 8 data tables in R's global environment. They are as follows:
+  
   a) feature - this is a 1 column data table of all the different types of measurements being taken
+  
   b) activity_label - this is a 2 column data table with 6 observations. It relates a number, 1-6 to an activity
+  
   c) SubjectTest - This is a 1 column data table with numbers 1-30. It identifies which test subject each row is for in the Testset (see e)
+  
   d) Testlabel - This is a 1 column data table with numbers 1-6 that identifies which activity is being done, using the activity_label data frame in b. This also identifies which activity was done in each row of e
+  
   e) Testset - this includes measurements of the features indicated in the table feature. d and c identify the activity and subject involved
+  
   Similarly, the remaining three tables, SubjectTrain, Trainlabel, and Trainset operate in the same way as c, d, and e.
   
   Each of these tables are read from the zip folder and their file paths can be found in the R script
